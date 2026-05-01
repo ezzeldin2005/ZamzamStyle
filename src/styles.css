@@ -1,0 +1,229 @@
+/* تعريف متغيرات CSS الفاخرة */
+:root {
+  --primary-gold: #b29c25;
+  --secondary-gold: #d4af37;
+  --dark-brown: #4b4210;
+  --light-bg: #f7f5e9;
+  --text-dark: #2c2c2c;
+  --text-light: #ffffff;
+}
+
+* {
+  font-family: 'Cairo', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+
+/* الألوان الذهبية الفاخرة */
+.bg-primary-gold {
+  background-color: var(--primary-gold) !important;
+}
+
+.bg-secondary-gold {
+  background-color: var(--secondary-gold) !important;
+}
+
+.bg-dark-brown {
+  background-color: var(--dark-brown) !important;
+}
+
+.text-primary-gold {
+  color: var(--primary-gold) !important;
+}
+
+.text-secondary-gold {
+  color: var(--secondary-gold) !important;
+}
+
+.text-dark-brown {
+  color: var(--dark-brown) !important;
+}
+
+/* الحدود والفواصل */
+.border-gold {
+  border-color: var(--primary-gold) !important;
+}
+
+.divider-gold {
+  border-top: 2px solid var(--primary-gold);
+  margin: 2rem 0;
+}
+
+/* النصوص */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+
+.display-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-brown);
+}
+
+/* الأزرار */
+.btn-gold {
+  background-color: var(--primary-gold) !important;
+  color: white !important;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: var(--secondary-gold) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(178, 156, 37, 0.3);
+}
+
+.btn-outline-gold {
+  color: var(--primary-gold) !important;
+  border-color: var(--primary-gold) !important;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--primary-gold) !important;
+  color: white !important;
+}
+
+/* بطاقات المنتجات */
+.product-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e0dcc8;
+  background-color: white;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(178, 156, 37, 0.2);
+  border-color: var(--primary-gold);
+}
+
+.product-card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-gold) 100%);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  color: var(--secondary-gold);
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+/* Header والـ Navbar */
+.navbar-custom {
+  background-color: white !important;
+  box-shadow: 0 2px 8px rgba(178, 156, 37, 0.1);
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-gold) !important;
+}
+
+.navbar-custom .nav-link {
+  color: var(--text-dark) !important;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: var(--primary-gold) !important;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-brown);
+  color: white;
+  padding: 40px 0 20px;
+}
+
+.footer h5 {
+  color: var(--secondary-gold);
+  margin-bottom: 20px;
+}
+
+.footer a {
+  color: #e0dcc8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--secondary-gold);
+}
+
+/* شبكة المنتجات */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+/* الفئات */
+.category-badge {
+  display: inline-block;
+  background-color: var(--primary-gold);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.category-badge:hover {
+  background-color: var(--secondary-gold);
+  transform: scale(1.05);
+}
+
+
+.mt-custom {
+  margin-top: 50px;
+}
+
+.mb-custom {
+  margin-bottom: 50px;
+}
+
+/* الاستجابة */
+@media (max-width: 768px) {
+  .display-text {
+    font-size: 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}
+/* You can add global styles to this file, and also import other style files */

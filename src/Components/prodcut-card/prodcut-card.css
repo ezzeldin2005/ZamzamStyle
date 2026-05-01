@@ -1,0 +1,93 @@
+.product-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+
+/* Hover = luxury lift */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(178, 156, 37, 0.25);
+}
+
+/* Image */
+.product-card img {
+  height: 220px; /* smaller */
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Subtle overlay effect */
+.product-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.15), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.product-card:hover::after {
+  opacity: 1;
+}
+
+/* Body */
+.card-body {
+  padding: 14px; /* smaller */
+}
+
+/* Title */
+.card-title {
+  color: #b29c25;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+/* Description */
+.card-text {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+
+/* Button (more modern) */
+.btn-gold {
+  font-size: 0.85rem;
+  padding: 6px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #b29c25, #d4af37);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(178, 156, 37, 0.3);
+}
+
+/* Badges smaller */
+.product-card .badge,
+.product-card span.position-absolute {
+  background: #d4af37;
+  font-size: 0.7rem;
+  padding: 5px 8px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .product-card img {
+    height: 180px;
+  }
+}

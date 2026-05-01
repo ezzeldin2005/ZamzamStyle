@@ -1,0 +1,135 @@
+.contact-section {
+  background: radial-gradient(circle at top, #1a1a1a, #0d0d0d 60%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle glow background */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(178,156,37,0.15), transparent 70%);
+  top: -200px;
+  left: -200px;
+  filter: blur(40px);
+}
+
+/* Title */
+.contact-title {
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+  letter-spacing: 3px;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.contact-title::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background: #d4af37;
+  display: block;
+  margin: 12px auto 0;
+  opacity: 0.7;
+}
+
+/* Card */
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  padding: 30px 20px;
+  transition: all 0.35s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* glowing border effect */
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent, rgba(212,175,55,0.4), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(212,175,55,0.15);
+}
+
+/* Icon bubble */
+.contact-card .icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(212,175,55,0.1);
+  border: 1px solid rgba(212,175,55,0.3);
+  font-size: 1.5rem;
+  color: #d4af37;
+}
+
+/* Title inside card */
+.contact-card h5 {
+  color: #d4af37;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Text */
+.contact-card p {
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* Links */
+.contact-card a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+.contact-card a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 1px;
+  background: #d4af37;
+  transition: 0.3s;
+}
+
+.contact-card a:hover::after {
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 22px;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+}

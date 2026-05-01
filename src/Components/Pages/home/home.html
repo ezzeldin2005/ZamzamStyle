@@ -1,0 +1,159 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container-lg text-center">
+
+    <h1 class="hero-title">
+      Zamzam Style
+    </h1>
+
+    <p class="hero-subtitle">
+      أجود العباءات الخليجية والسورية بأسعار منافسة وجودة عالية
+    </p>
+
+    <a href="#featured" class="btn btn-gold btn-lg hero-btn">
+      تصفح المجموعة
+    </a>
+
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section id="featured" class="py-5 container-lg">
+  <h2 class="text-center mb-5 display-text">المنتجات المميزة</h2>
+
+  <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4">
+          <app-prodcut-card [product]="products[0]"></app-prodcut-card>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+           <app-prodcut-card [product]="products[1]"></app-prodcut-card>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+           <app-prodcut-card [product]="products[2]"></app-prodcut-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <app-prodcut-card [product]="products[3]"></app-prodcut-card>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <app-prodcut-card [product]="products[4]"></app-prodcut-card>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <app-prodcut-card [product]="products[5]"></app-prodcut-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <app-prodcut-card [product]="products[6]"></app-prodcut-card>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <app-prodcut-card [product]="products[7]"></app-prodcut-card>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <app-prodcut-card [product]="products[8]"></app-prodcut-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+<!-- Categories Section -->
+<section class="py-5 bg-light-bg mt-4">
+  <div class="container-lg">
+    <h2 class="text-center mb-5 display-text">تصفح حسب الفئة</h2>
+    <div class="row g-4">
+        @for (cat of categories; track $index) {
+            <div class="col-md-6 col-lg-3">
+        <div class="text-center p-4 rounded category-box">
+          <div class="display-1 mb-3">{{ cat.Icon }}</div>
+          <h3 class="text-dark-brown">{{ cat.Name }}</h3>
+          <p class="text-muted mb-3">اكتشف أجود الخيارات</p>
+          <a 
+              [routerLink]="cat.ID === 1 ? ['/shop'] : ['/shop', cat.ID]" 
+              class="btn btn-outline-gold"
+            >
+              تصفح
+            </a>
+        </div> 
+      </div>
+        }
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 container-lg">
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <img src="/NewBanner2.png" alt="العباءات الفاخرة" class="img-fluid rounded">
+    </div>
+    <div class="col-lg-6">
+      <h2 class="display-text mb-4">عن Zamzam</h2>
+      <p class="mb-3 lead">نحن متخصصون في بيع أجود العباءات الخليجية والسورية، حيث نقدم تشكيلة واسعة من الخيارات الفاخرة والمتنوعة.</p>
+      <p class="mb-3">كل عباءة لدينا مختارة بعناية من أفضل الصناع والمصنعين، لضمان الجودة والراحة لعملائنا الكرام.</p>
+      <ul class="list-unstyled">
+        <li class="mb-2">✅ جودة عالية ومضمونة</li>
+        <li class="mb-2">✅ أسعار منافسة وعروض خاصة</li>
+        <li class="mb-2">✅ خدمة عملاء على مدار الساعة</li>
+      </ul>
+      <a routerLink="/shop" class="btn btn-gold btn-lg mt-4">تصفح المجموعة الكاملة</a>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<!-- <section class="py-5 bg-dark-brown text-white">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="display-text text-white mb-3">اشترك في نشرتنا الإخبارية</h2>
+        <p class="mb-4 lead">احصل على أحدث العروض والتخفيفات على بريدك الإلكتروني</p>
+        <form class="input-group input-group-lg">
+          <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+          <button class="btn btn-gold" type="submit">اشترك</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->

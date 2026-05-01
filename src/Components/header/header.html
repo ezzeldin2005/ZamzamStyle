@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light navbar-modern sticky-top">
+  <div class="container-lg">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="/favicon.ico" class="logo-img" alt="Zamzam Logo">
+      <span class="brand-text">Zamzam</span>
+    </a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- Center Links -->
+      <ul class="navbar-nav mx-auto text-center media ">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/shop" routerLinkActive="active">
+            المتجر
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">
+            التواصل
+          </a>
+        </li>
+      </ul>
+
+      <!-- Social Links -->
+      <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+
+        <a href="https://www.facebook.com/share/g/1EJLDYUp8F/"
+           class="d-flex align-items-center gap-1 text-decoration-none">
+           <span class="socilatext">Facebook</span>
+           <i class="fa-brands fa-facebook text-black "></i>
+        </a>
+
+        <a href="https://t.me/+SfdqWgBpFJmYNbrb"
+           class="d-flex align-items-center gap-1 text-decoration-none">
+           <span class="socilatext">Telegram</span>
+           <i class="fa-brands fa-telegram text-black "></i>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</nav>

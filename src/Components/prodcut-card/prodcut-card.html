@@ -1,0 +1,25 @@
+<div class="card product-card h-100">
+  
+  <div class="position-relative overflow-hidden">
+    <img [src]="product.ImgUrl" class="card-img-top" alt="Product Name">
+
+  </div>
+
+  <div class="card-body d-flex flex-column">
+
+    <!-- Title -->
+    <h5 class="card-title">
+      {{product.Name}}
+    </h5>
+
+    <!-- Description -->
+    <p class="card-text text-muted small flex-grow-1">
+      {{product.Desription}}
+    </p>
+      <!-- Color -->
+      <span class="badge text-dark ">
+       {{product.Color}}
+      </span>
+    </div>
+
+  </div>

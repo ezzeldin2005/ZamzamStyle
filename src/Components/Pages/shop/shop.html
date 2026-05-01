@@ -1,0 +1,27 @@
+<div class="container-lg py-5">
+
+  <!-- Filters -->
+  <div class="row mb-4">
+
+    <!-- Categories -->
+    <div class="col-md-4">
+      <h5>الفئة</h5>
+      <button class="btn btn-outline-gold me-2" (click)="onCategoryChange(1)">الكل</button>
+      <button class="btn btn-outline-gold me-2" (click)="onCategoryChange(2)">خليجي</button>
+      <button class="btn btn-outline-gold me-2" (click)="onCategoryChange(3)">سوري</button>
+      <button class="btn btn-outline-gold me-2" (click)="onCategoryChange(4)">اطفال</button>
+    </div>
+
+  </div>
+
+  <!-- Products -->
+  <div class="row g-4">
+    @for (product of filteredProducts; track $index) {
+      <div class="col-md-6 col-lg-4">
+      <app-prodcut-card [product]="product"></app-prodcut-card>
+    </div>
+    }
+    
+  </div>
+
+</div>
