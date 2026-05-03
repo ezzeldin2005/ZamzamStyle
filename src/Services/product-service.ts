@@ -9,74 +9,74 @@ export class ProductService {
   private products: IProduct[] = [
     {
       ID: 1,
-      Name: 'عباءة خليجية فاخرة',
+      Name: 'عباية خليجية فاخرة',
       Desription: 'تصميم أنيق ومريح',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'أسود',
+      Color: ['أسود','رمادى'],
       CategoryID: 2
     },
     {
       ID: 2,
-      Name: 'عباءة سورية كلاسيك',
+      Name: 'عباية سورية كلاسيك',
       Desription: 'خامة عالية الجودة',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'كحلي',
+      Color: ['أسود','رمادى'],
       CategoryID: 2
     },
     {
       ID: 3,
-      Name: 'عباءة عصرية',
+      Name: 'عباية عصرية',
       Desription: 'ستايل حديث',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'بيج',
+      Color: ['أسود','رمادى'],
       CategoryID: 2
     },
     {
       ID: 4,
-      Name: 'عباءة مطرزة',
+      Name: 'عباية مطرزة',
       Desription: 'تفاصيل فاخرة',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'أسود',
+      Color: ['أسود','رمادى'],
       CategoryID: 3
     },
     {
       ID: 5,
-      Name: 'عباءة يومية',
+      Name: 'عباية يومية',
       Desription: 'خفيفة ومريحة',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'رمادي',
+      Color: ['أسود','رمادى'],
       CategoryID: 3
     },
     {
       ID: 6,
-      Name: 'عباءة أطفال',
+      Name: 'عباية أطفال',
       Desription: 'ناعمة ومريحة',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'وردي',
+      Color: ['أسود','رمادى'],
       CategoryID: 3
     },
     {
       ID: 7,
-      Name: 'عباءة فخمة',
+      Name: 'عباية فخمة',
       Desription: 'للمناسبات',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'ذهبي',
+      Color: ['أسود','رمادى'],
       CategoryID: 4
     },
     {
       ID: 8,
-      Name: 'عباءة سوداء كلاسيك',
+      Name: 'عباية سوداء كلاسيك',
       Desription: 'تصميم بسيط',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'أسود',
+      Color: ['أسود','رمادى'],
       CategoryID: 4
     },
     {
       ID: 9,
-      Name: 'عباءة مفتوحة',
+      Name: 'عباية مفتوحة',
       Desription: 'ستايل كاجوال',
       ImgUrl: '/Ln8bIoYzP7olebcMxguN6ottJfC56XwKM5fK9mBj.jpg',
-      Color: 'أبيض',
+      Color: ['أسود','رمادى'],
       CategoryID: 4
     }
   ];

@@ -17,9 +17,16 @@
       {{product.Desription}}
     </p>
       <!-- Color -->
-      <span class="badge text-dark ">
-       {{product.Color}}
-      </span>
+       <div class="d-flex justify-content-end gap-2">
+         
+       @for (colr of product.Color; track $index) {
+        <span class="badge text-dark">
+          {{colr}}
+         </span>
+       }
+         
+       </div>
+      
     </div>
 
   </div>

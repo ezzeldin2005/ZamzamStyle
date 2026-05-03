@@ -3,6 +3,6 @@ export interface IProduct {
     Name:string,
     Desription:string,
     ImgUrl:string,
-    Color:string,
+    Color:string[],
     CategoryID: number;
 }

@@ -17,9 +17,9 @@
 
 /* Image */
 .product-card img {
-  height: 220px; /* smaller */
+  height: 400px; /* smaller */
   width: 100%;
-  object-fit: cover;
+  object-fit:fill;
   transition: transform 0.4s ease;
 }
 
@@ -63,14 +63,7 @@
 
 
 /* Button (more modern) */
-.btn-gold {
-  font-size: 0.85rem;
-  padding: 6px;
-  border-radius: 25px;
-  background: linear-gradient(135deg, #b29c25, #d4af37);
-  border: none;
-  transition: all 0.3s ease;
-}
+
 
 .btn-gold:hover:not(:disabled) {
   transform: translateY(-2px);
