@@ -104,6 +104,14 @@
   }
 }
 
+/* media query for mobile */
+@media (max-width: 576px) {
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: none; /* hide arrows on mobile */
+  } 
+}
 
 /* Make arrows black */
 .carousel-control-prev-icon,
